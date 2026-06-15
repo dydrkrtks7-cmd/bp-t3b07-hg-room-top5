@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화곡 룸싸롱 TOP5 - 상세 정보 & 이용 가이드</title>
+    <meta name="description" content="화곡 룸싸롱 TOP5에 대한 모든 정보를 한눈에! 위치, 가격대, 예약 방법, 실제 이용 후기까지. 화곡동 룸싸롱 완벽 가이드로 오늘 저녁을 결정하세요.">
+    <meta name="keywords" content="화곡 룸싸롱 정보, 화곡 룸싸롱 가격, 화곡 룸싸롱 위치, 화곡 룸싸롱 후기, 화곡동 유흥 정보, 화곡 룸싸롱 예약">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://t3b07-hg-room-top5.vercel.app/info">
+    <meta property="og:title" content="화곡 룸싸롱 TOP5 - 상세 정보 & 이용 가이드">
+    <meta property="og:description" content="화곡 룸싸롱 TOP5에 대한 모든 정보를 한눈에! 위치, 가격대, 예약 방법, 실제 이용 후기까지. 화곡동 룸싸롱 완벽 가이드로 오늘 저녁을 결정하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b07-hg-room-top5.vercel.app/info">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ff4444;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            border-bottom: 4px solid #ff4444;
+            padding-bottom: 15px;
+            text-shadow: 3px 3px 0 #000;
+        }
+        h2 {
+            font-size: 2.5rem;
+            border-left: 6px solid #ff4444;
+            padding-left: 15px;
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: #ff6666;
+        }
+        p, li, a, div {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+        a {
+            color: #ff6666;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        a:hover {
+            color: #fff;
+            border-bottom-color: #ff4444;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #222;
+            border-bottom: 4px solid #ff4444;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff4444;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 0 #000;
+        }
+        .logo span {
+            color: #fff;
+            background: #ff4444;
+            padding: 0 8px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav a {
+            color: #ccc;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-bottom: none;
+            padding: 5px 0;
+        }
+        nav a:hover {
+            color: #ff4444;
+            border-bottom: 2px solid #ff4444;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: #ff4444;
+            transition: all 0.3s;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.4rem; }
+            .header-inner { flex-wrap: wrap; }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+                gap: 15px;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            padding: 60px 0;
+            border-bottom: 3px solid #ff4444;
+            text-align: center;
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .info-card {
+            background: #252525;
+            border: 2px solid #333;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s;
+        }
+        .info-card:hover {
+            border-color: #ff4444;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255,68,68,0.2);
+        }
+        .info-card h3 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #ff4444;
+        }
+        .info-card .price-tag {
+            font-size: 2rem;
+            color: #ff4444;
+            font-weight: bold;
+        }
+        .info-card .badge {
+            display: inline-block;
+            background: #ff4444;
+            color: #fff;
+            padding: 3px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .detail-list {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+        }
+        .detail-list li span:first-child {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        .detail-list li span:last-child {
+            color: #fff;
+            font-weight: bold;
+        }
+        .faq-section {
+            background: #222;
+            padding: 40px;
+            margin: 50px 0;
+            border: 2px solid #333;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h4 {
+            color: #ff6666;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .faq-item h4::before {
+            content: "▶ ";
+            color: #ff4444;
+        }
+        .faq-item p {
+            padding-left: 25px;
+            color: #bbb;
+        }
+        .tel-link {
+            display: inline-block;
+            background: #ff4444;
+            color: #fff !important;
+            padding: 12px 30px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            transition: all 0.3s;
+            margin: 20px 0;
+        }
+        .tel-link:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+        .cta-box {
+            background: #2a2a2a;
+            border: 3px solid #ff4444;
+            text-align: center;
+            padding: 50px;
+            margin: 40px 0;
+        }
+        .cta-box p {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #111;
+            border-top: 4px solid #ff4444;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo"><span>화곡</span>룸싸롱 TOP5</div>
+            <nav>
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/info">정보</a></li>
+                    <li><a href="/review">후기</a></li>
+                    <li><a href="/location">위치</a></li>
+                    <li><a href="/price">가격</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>화곡 룸싸롱 TOP5<br>완벽 가이드</h1>
+            <p>형들이 직접 발로 뛰고 입으로 확인한 화곡동 룸싸롱 5곳의 모든 것.<br>위치, 가격, 분위기, 꿀팁까지 싹 다 공개한다.</p>
+            <a href="tel:010-0000-0000" class="tel-link">📞 지금 전화 예약</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>🔥 화곡 룸싸롱 TOP5 상세 정보</h2>
+        <p style="margin-bottom: 30px;">화곡동에서 가장 핫한 다섯 곳을 엄선했다. 각 업소의 특징, 가격대, 추천 포인트를 정리했으니 취향에 맞게 골라보시라.</p>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <span class="badge">#1 추천</span>
+                <h3>더블랙 화곡</h3>
+                <p>화곡동 룸싸롱의 새로운 기준. 인테리어부터 마인드까지 완벽하다.</p>
+                <div class="price-tag">30~50만원</div>
+                <ul class="detail-list">
+                    <li><span>위치</span><span>화곡동 메인로 25</span></li>
+                    <li><span>규모</span><span>룸 8개 / 최대 20명</span></li>
+                    <li><span>음악</span><span>힙합 / EDM / 발라드</span></li>
+                    <li><span>특징</span><span>VIP룸 별도, 칵테일 바</span></li>
+                    <li><span>영업시간</span><span>20:00 ~ 05:00</span></li>
+                </ul>
+                <p>형들 사이에서 입소문 난 곳. 사장님이 직접 서빙하고 분위기 메이킹까지 해주는 센스. 초행도 편하게 간다.</p>
+            </div>
+
+            <div class="info-card">
+                <span class="badge">가성비 갑</span>
+                <h3>룸스 화곡</h3>
+                <p>가격은 착한데 퀄리티는 안 착하다. 가성비 원탑.</p>
+                <div class="price-tag">20~35만원</div>
+                <ul class="detail-list">
+                    <li><span>위치</span><span>화곡중앙로 112</span></li>
+                    <li><span>규모</span><span>룸 6개 / 최대 15명</span></li>
+                    <li><span>음악</span><span>트로트 / 가요 / 댄스</span></li>
+                    <li><span>특징</span><span>노래방 기기 완비</span></li>
+                    <li><span>영업시간</span><span>19:00 ~ 04:00</span></li>
+                </ul>
+                <p>처음 가는 후배들 데려가기 딱 좋다. 부담 없는 가격에 분위기까지 잡고, 다 같이 노래방 모드로 풀 코스.</p>
+            </div>
+
+            <div class="info-card">
+                <span class="badge">프리미엄</span>
+                <h3>에이스 화곡</h3>
+                <p>비즈니스 접대, 중요한 자리엔 여기밖에 없다.</p>
+                <div class="price-tag">50~80만원</div>
+                <ul class="detail-list">
+                    <li><span>위치</span><span>화곡로 357</span></li>
+                    <li><span>규모</span><span>룸 10개 / 최대 30명</span></li>
+                    <li><span>음악</span><span>재즈 / 라운지 / 팝</span></li>
+                    <li><span>특징</span><span>발렛파킹, 위스키 바</span></li>
+                    <li><span>영업시간</span><span>18:00 ~ 06:00</span></li>
+                </ul>
+                <p>고급스러운 분위기에서 접대하고 싶다면? 여기다. 직원들 서비스 마인드도 프로페셔널. 손님 대접받는 기분.</p>
+            </div>
+
+            <div class="info-card">
+                <span class="badge">감성 충만</span>
+                <h3>달빛 화곡</h3>
+                <p>감성에 취하고 싶은 날. 조명과 음악이 완벽하다.</p>
+                <div class="price-tag">30~45만원</div>
+                <ul class="detail-list">
+                    <li><span>위치</span><span>화곡동 48-7</span></li>
+                    <li><span>규모</span><span>룸 5개 / 최대 12명</span></li>
+                    <li><span>음악</span><span>어쿠스틱 / 인디 / 발라드</span></li>
+                    <li><span>특징</span><span>무드등, 포토존</span></li>
+                    <li><span>영업시간</span><span>20:00 ~ 03:00</span></li>
+                </ul>
+                <p>여자친구랑 오거나 소규모로 감성 터지고 싶을 때 강추. 인테리어 하나는 예술이다. 사진 찍기 좋아.</p>
+            </div>
+
+            <div class="info-card">
+                <span class="badge">24시</span>
+                <h3>나이트 화곡</h3>
+                <p>밤샘 작업? 이른 아침까지 즐기고 싶다면?</p>
+                <div class="price-tag">35~55만원</div>
+                <ul class="detail-list">
+                    <li><span>위치</span><span>화곡역 3번 출구 앞</span></li>
+                    <li><span>규모</span><span>룸 7개 / 최대 25명</span></li>
+                    <li><span>음악</span><span>힙합 / EDM / 최신곡</span></li>
+                    <li><span>특징</span><span>24시 영업, 심야 할인</span></li>
+                    <li><span>영업시간</span><span>24시간</span></li>
+                </ul>
+                <p>늦은 시간까지 놀고 싶은 형들을 위한 곳. 역 앞이라 접근성도 좋고, 새벽엔 가
+</body>
+</html>
